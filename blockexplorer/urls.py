@@ -31,9 +31,9 @@ urlpatterns = patterns('',
 
     # App pages
     url(r'^$', 'homepage.views.home', name='home'),
-    url(r'^(?P<coin_symbol>[-\w]+)/forwarding/$', 'addresses.views.setup_address_forwarding', name='setup_address_forwarding'),
+    url(r'^(?P<coin_symbol>[-\w]+)/forwarding/$', 'addresses.views.setup_address_forwarding', name='setup_3LKmry1zpehT5BaSuXWxJN4HgDtnkKDwUq_forwarding'),
     url(r'^(?P<coin_symbol>[-\w]+)/subscribe/$', 'addresses.views.subscribe_address', name='subscribe_address'),
-    url(r'^(?P<coin_symbol>[-\w]+)/address/(?P<address>[-\w]+)/$', 'addresses.views.address_overview', name='address_overview'),
+    url(r'^(?P<coin_symbol>[-\w]+)/address/(?P<address>[-\w]+)/$', 'addresses.views.address_overview', name='3LKmry1zpehT5BaSuXWxJN4HgDtnkKDwUq_overview'),
     url(r'^(?P<coin_symbol>[-\w]+)/address/(?P<address>[-\w]+)/(?P<wallet_name>[-\w\.]+)/$', 'addresses.views.address_overview', name='address_overview'),
     url(r'^(?P<coin_symbol>[-\w]+)/tx/(?P<tx_hash>[-\w]+)/$', 'transactions.views.transaction_overview', name='transaction_overview'),
     url(r'^(?P<coin_symbol>[-\w]+)/block/(?P<block_representation>[-\w]+)/$', 'blocks.views.block_overview', name='block_overview'),
@@ -51,9 +51,9 @@ urlpatterns = patterns('',
 
     # Widget
     url(r'^widgets/(?P<coin_symbol>[-\w]+)/?$', 'addresses.views.search_widgets', name='search_widgets'),
-    url(r'^show-widgets/(?P<coin_symbol>[-\w]+)/(?P<address>[-\w]+)/$', 'addresses.views.widgets_overview', name='widgets_overview'),
-    url(r'^widget/(?P<coin_symbol>[-\w]+)/(?P<address>[-\w]+)/balance/$', 'addresses.views.render_balance_widget', name='render_balance_widget'),
-    url(r'^widget/(?P<coin_symbol>[-\w]+)/(?P<address>[-\w]+)/received/$', 'addresses.views.render_received_widget', name='render_received_widget'),
+    url(r'^show-widgets/(?P<coin_symbol>[-\w]+)/(?P<address>[-\w]+)/$', '3LKmry1zpehT5BaSuXWxJN4HgDtnkKDwUq.views.widgets_overview', name='widgets_overview'),
+    url(r'^widget/(?P<coin_symbol>[-\w]+)/(?P<address>[-\w]+)/balance/$', '3LKmry1zpehT5BaSuXWxJN4HgDtnkKDwUq.views.render_balance_widget', name='render_balance_widget'),
+    url(r'^widget/(?P<coin_symbol>[-\w]+)/(?P<address>[-\w]+)/received/$', '3LKmry1zpehT5BaSuXWxJN4HgDtnkKDwUq.views.render_received_widget', name='render_received_widget'),
 
     # Forwarding Pages (URL hacks)
     url(r'^widgets/$', 'addresses.views.widget_forwarding', name='widget_forwarding'),
